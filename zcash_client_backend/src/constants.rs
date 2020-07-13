@@ -5,5 +5,5 @@ pub mod regtest;
 pub mod testnet;
 
 pub const SPROUT_CONSENSUS_BRANCH_ID: u32 = 0;
-pub const OVERWINTER_CONSENSUS_BRANCH_ID: u32 = 0x5ba8_1b19;
-pub const SAPLING_CONSENSUS_BRANCH_ID: u32 = 0x76b8_09bb;
+pub const OVERWINTER_CONSENSUS_BRANCH_ID: u32 = 0x6f76_727a;
+pub const SAPLING_CONSENSUS_BRANCH_ID: u32 = 0x7361_707a;
