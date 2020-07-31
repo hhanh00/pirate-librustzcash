@@ -445,6 +445,10 @@ impl<'a, P: consensus::Parameters, R: RngCore + CryptoRng> Builder<'a, P, R> {
         }
     }
 
+    pub fn set_fee(&mut self, fee: Amount) {
+        self.fee = fee;
+    }
+    
     /// Adds a Sapling note to be spent in this transaction.
     ///
     /// Returns an error if the given Merkle path does not have the same anchor as the
