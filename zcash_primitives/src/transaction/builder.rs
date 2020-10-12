@@ -214,7 +214,7 @@ impl TransparentInputs {
     fn apply_signatures(
         &self,
         mtx: &mut TransactionData,
-        consensus_branch_id: consensus::BranchId,
+        consensus_branch_id: u32,
     ) {
         let mut sighash = [0u8; 32];
         for (i, info) in self.inputs.iter().enumerate() {
@@ -438,7 +438,7 @@ impl<R: RngCore + CryptoRng> Builder<R> {
     /// the network.
     pub fn build(
         mut self,
-        consensus_branch_id: consensus::BranchId,
+        consensus_branch_id: u32,
         prover: &impl TxProver,
     ) -> Result<(Transaction, TransactionMetadata), Error> {
         let mut tx_metadata = TransactionMetadata::new();

@@ -152,7 +152,7 @@ fn shielded_outputs_hash(tx: &TransactionData) -> Blake2bHash {
 
 pub fn signature_hash_data(
     tx: &TransactionData,
-    consensus_branch_id: consensus::BranchId,
+    consensus_branch_id: u32,
     hash_type: u32,
     transparent_input: Option<(usize, &Script, Amount)>,
 ) -> Vec<u8> {
@@ -230,7 +230,7 @@ pub fn signature_hash_data(
 
 pub fn signature_hash(
     tx: &Transaction,
-    consensus_branch_id: consensus::BranchId,
+    consensus_branch_id: u32,
     hash_type: u32,
     transparent_input: Option<(usize, &Script, Amount)>,
 ) -> Vec<u8> {
